@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Fantome.Libraries.League" Version="1.6.4" />
     <PackageReference Include="LeagueToolkit" Version="2.1.0" />
   </ItemGroup>
 

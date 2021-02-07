@@ -39,6 +39,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,11 +117,49 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(289, 171);
+            this.label3.Location = new System.Drawing.Point(477, 335);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 15);
             this.label3.TabIndex = 7;
             this.label3.Text = "v1.0 by TheKillerey";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(288, 250);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(105, 23);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Load GLB/GLTF";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(161, 221);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(232, 23);
+            this.textBox3.TabIndex = 9;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 224);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 15);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "GLB/GLTF to League";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(221, 294);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(146, 29);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Create League File";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
@@ -125,7 +167,11 @@
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 189);
+            this.ClientSize = new System.Drawing.Size(593, 359);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
@@ -154,6 +200,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

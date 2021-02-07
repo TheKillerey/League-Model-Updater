@@ -21,10 +21,10 @@ namespace GLTF2League
            
            
            
-           var model = SharpGLTF.Schema2.ModelRoot.Load(@"K:\Riot Games\LeagueSkins\WheelChair Yasuo\RAW\assets\characters\yasuo\skins\base\yasuo.glb");
+           var model = ModelRoot.Load("‪‪K:/Riot Games/LeagueSkins/TestFiles/dummy.glb");
            var skn = SimpleSkinGltfExtensions.ToLeagueModel(model);
            
-            skn.Item1.Write(@"K:\Riot Games\LeagueSkins\WheelChair Yasuo\RAW\assets\characters\yasuo\skins\base\yasuo.skn");
+            skn.Item1.Write(@"‪K:\Riot Games\LeagueSkins\DummytoOrnn\data\characters\practicetool_targetdummy\skins\base\dummy.skn");
             if(skn.Item2.Joints.Count == 0)
             {
                Console.WriteLine("Root Joint doesn't have a name.");
@@ -32,12 +32,12 @@ namespace GLTF2League
 
             else
             {
-                skn.Item2.Write(@"K:\Riot Games\LeagueSkins\WheelChair Yasuo\RAW\assets\characters\yasuo\skins\base\yasuo.skl");
+                skn.Item2.Write(@"‪K:\Riot Games\LeagueSkins\DummytoOrnn\data\characters\practicetool_targetdummy\skins\base\dummy.skl");
             }
 
             byte[] find = {0x00, 0x00, 0x6F, 0x74};
             byte[] replace = {0x72, 0x6F, 0x6F, 0x74};
-            byte[] file = File.ReadAllBytes(@"K:\Riot Games\LeagueSkins\WheelChair Yasuo\RAW\assets\characters\yasuo\skins\base\yasuo.skl");
+            byte[] file = File.ReadAllBytes(@"‪K:\Riot Games\LeagueSkins\DummytoOrnn\data\characters\practicetool_targetdummy\skins\base\dummy.skl");
             int i, j, iMax = file.Length - find.Length ;
             for (i = 0; i <= iMax; i++)
             {
@@ -49,7 +49,7 @@ namespace GLTF2League
             {
               for (j = 0; j < find.Length; j++)
                 file[i + j] = replace[j];
-              File.WriteAllBytes(@"K:\Riot Games\LeagueSkins\WheelChair Yasuo\RAW\assets\characters\yasuo\skins\base\yasuo.skl", file);
+              File.WriteAllBytes(@"‪K:\Riot Games\LeagueSkins\DummytoOrnn\data\characters\practicetool_targetdummy\skins\base\dummy.skl", file);
             }
             
 
