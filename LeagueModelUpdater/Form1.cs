@@ -46,19 +46,14 @@ namespace LeagueModelUpdater
 
                 
                 SimpleSkin skinfile = new(sknfile);
-                Skeleton skeletonfile = new(sklfile);
-                var lol2gltf = SimpleSkinGltfExtensions.ToGltf(skinfile, skeletonfile);
-                var gltf2lol = lol2gltf.ToLeagueModel();
+                Skeleton skeletonfile = new Skeleton(sklfile);
                 
-
-                var sknfilenew = gltf2lol.Item1;
-                var sklfilenew = gltf2lol.Item2;
 
                 string outputSKN = Path.ChangeExtension(sknfile, "new.skn");
                 string outputSKL = Path.ChangeExtension(sklfile, "new.skl");
 
-                sknfilenew.Write(outputSKN);
-                sklfilenew.Write(outputSKL);
+                skinfile.Write(outputSKN);
+                skeletonfile.Write(outputSKL);
 
                 //Fixes the error that is caused by Crauzer :v
                 byte[] find = {0x00, 0x00, 0x6F, 0x74};
@@ -86,7 +81,7 @@ namespace LeagueModelUpdater
                 MessageBox.Show("Skeleton Missing. Your SKN file needs a skeleton (SKL).", $"Error: Can't find .skl file!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
+            MessageBox.Show("Your League Skin is now updated to the latest League version.", $"Files Exported!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -128,7 +123,7 @@ namespace LeagueModelUpdater
                 MessageBox.Show("Skeleton Missing. Your SKN file needs a skeleton (SKL).", $"Error: Can't find .skl file!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
+            MessageBox.Show("Your League Skin is now updated to the latest League version.", $"Files Exported!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         

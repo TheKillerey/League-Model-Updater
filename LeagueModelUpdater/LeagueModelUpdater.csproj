@@ -5,16 +5,17 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>killerskinslogov2_new.ico</ApplicationIcon>
-    <Authors>TheKillerey, Crauzer</Authors>
+    <Authors>TheKillerey</Authors>
     <Company>KillerSkins</Company>
     <Copyright>TheKillerey</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Version>1.1.0</Version>
+    <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Fantome.Libraries.League" Version="1.6.4" />
-    <PackageReference Include="LeagueToolkit" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +35,12 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="LeagueToolkit">
+      <HintPath>K:\Riot Games\LeagueTools\VS_Sources\LeagueToolkit-0.2\LeagueToolkit\obj\x64\Debug\netstandard2.1\LeagueToolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
