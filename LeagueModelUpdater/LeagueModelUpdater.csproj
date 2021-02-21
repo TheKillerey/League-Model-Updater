@@ -10,11 +10,13 @@
     <Copyright>TheKillerey</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
+    <PackageReleaseNotes>Added more options for users.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Control.Draggable" Version="1.0.5049.269" />
     <PackageReference Include="Fantome.Libraries.League" Version="1.6.4" />
   </ItemGroup>
 
@@ -22,11 +24,20 @@
     <Compile Update="Form1.cs">
       <Generator></Generator>
     </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Form1.resx">
       <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
@@ -39,7 +50,7 @@
 
   <ItemGroup>
     <Reference Include="LeagueToolkit">
-      <HintPath>K:\Riot Games\LeagueTools\VS_Sources\LeagueToolkit-0.2\LeagueToolkit\obj\x64\Debug\netstandard2.1\LeagueToolkit.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Github\Fantome.Libraries.League\LeagueToolkit\bin\x64\Debug\netstandard2.1\LeagueToolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
 
